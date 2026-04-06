@@ -60,10 +60,18 @@ function renderMenu(items) {
             let lastUnit = '';
             let listHTML = '';
 
-            // Sort logic
-            categories[cat].sort((a, b) => a.name.toLowerCase().includes('samosa') ? -1 : 1);
+            // --- FIXED SORTING LOGIC ---
+            categories[cat].sort((a, b) => {
+                // 1. First, group by unit (e.g., Per Kg items stay together)
+                const unitCompare = a.unit.localeCompare(b.unit);
+                if (unitCompare !== 0) return unitCompare;
+
+                // 2. Second, sort by Price (Lowest to Highest)
+                return a.price - b.price;
+            });
 
             categories[cat].forEach(item => {
+                // Add the orange sub-header when the unit changes (e.g., switching from Kg to Plate)
                 if (item.unit !== lastUnit) {
                     listHTML += `<li class="small-header">Price(₹) / ${item.unit}</li>`;
                     lastUnit = item.unit;
@@ -81,7 +89,6 @@ function renderMenu(items) {
     });
     container.innerHTML = html;
 }
-
 // Ensure the scripts run after the HTML is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
     initStatus();
