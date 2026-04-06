@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gujarati Nasta Ghar | Authentic Homemade Taste</title>
+    
+    <!-- Professional Styling & Fonts -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Supabase SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+   <nav class="navbar">
+    <div class="nav-container">
+        <!-- Logo on the left -->
+        <div class="brand">
+            <img src="logo.png" alt="Logo" class="logo">
+        </div>
+
+        <!-- Grouped info on the right -->
+        <div class="nav-right">
+            <div id="status-badge" class="status-badge badge-open">
+                <span class="badge-dot"></span> Open Now
+            </div>
+            <a href="tel:+919825710000" class="nav-phone">
+                <i class="fas fa-phone-alt"></i> 9825710000
+            </a>
+        </div>
+    </div>
+</nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h2 class="script-text">Gujarati Nasta Ghar</h2>
+            <h1>FRESH. HOMEMADE. AUTHENTIC.</h1>
+            <p>Traditional snacks made with love, delivered to your doorstep in Surat.</p>
+            <div class="hero-actions">
+                <a href="#menu" class="btn btn-primary">Explore Menu</a>
+                <a href="https://wa.me/919825710000?text=I'd like to order Nasta!" target="_blank" class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu Section -->
+    <section id="menu" class="section menu-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="subtitle">Our Flavors</span>
+                <h2 class="title">FOOD MENU</h2>
+            </div>
+            <div id="loader" class="loader"><i class="fas fa-circle-notch fa-spin"></i> Preparing your menu...</div>
+            <div class="menu-grid" id="menu-display"></div>
+        </div>
+    </section>
+
+    <!-- Google Reviews Widget Section -->
+    <section class="section reviews-section" id="reviews">
+        <div class="container">
+            <div class="section-header">
+                <span class="subtitle">Testimonials</span>
+                <h2 class="title">WHAT CUSTOMERS SAY</h2>
+            </div>
+            
+
+            <script defer async src='https://cdn.trustindex.io/loader.js?bfc2e7b68d4d93286f766dca34e'></script>
+        
+            
+            <div class="review-cta">
+                <h3>Loved our Nasta?</h3>
+                <p>Your feedback helps us serve you better. Please leave a review on Google!</p>
+                <a href="https://search.google.com/local/writereview?placeid=ChIJ7TB5MMbc4DsRY1-C8NEvjyg" target="_blank" class="google-btn">
+                    <i class="fab fa-google"></i> Rate Us on Google
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Map Section -->
+    <section class="section contact-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <!-- Interactive Map -->
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.8914479617756!2d72.80062367503636!3d21.196470780495165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04dc6307930ed%3A0x288f2fd1f0825f63!2sGujarati%20Nasta%20Ghar!5e0!3m2!1sen!2sin!4v1775457520272!5m2!1sen!2sin" width="100%" height="450" style="border:0; border-radius: 15px;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+
+                <!-- Professional Business Card -->
+                <div class="contact-card">
+                    <div class="card-header">
+                        <h2>Divya Gheewala</h2>
+                        <span class="designation">Owner</span>
+                    </div>
+                    <div class="card-body">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Gujarati+Nasta+Ghar+Adajan+Surat" target="_blank" class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>B/19 Krishna Nagar Soc- 2, Choksi Wadi, Adajan, Surat</p>
+                        </a>
+                        <a href="tel:+919825710000" class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <p>+91 98257 10000</p>
+                        </a>
+                        <div class="contact-item">
+                            <i class="far fa-clock"></i>
+                            <p>8:00 AM - 8:30 PM (Daily)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Action -->
+    <a href="https://wa.me/919825710000" class="floating-whatsapp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span>Order Now</span>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Gujarati Nasta Ghar. All Rights Reserved.</p>
+        <p>Handcrafted with ❤️ in Surat, Gujarat.</p>
+    </footer>
+
+    <!-- LOGIC SCRIPT -->
+    <script src="main.js"></script>
+</body>
+</html>

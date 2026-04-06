@@ -1,0 +1,252 @@
+/* --- Root Variables & Reset --- */
+:root {
+    --primary: #e67e22;
+    --primary-dark: #d35400;
+    --dark: #0f0f0f;
+    --card-bg: #1a1a1a;
+    --text: #ffffff;
+    --text-muted: #a0a0a0;
+    --whatsapp: #25d366;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { 
+    font-family: 'Poppins', sans-serif; 
+    background: var(--dark); 
+    color: var(--text); 
+    line-height: 1.6; 
+    scroll-behavior: smooth;
+}
+
+/* --- Navigation & Open Now Badge --- */
+.navbar { 
+    background: #000; 
+    padding: 15px 5%; 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+    border-bottom: 2px solid var(--primary); 
+}
+
+.nav-container { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo { height: 50px; }
+
+/* Grouping Status and Phone on the Right */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.status-badge { 
+    font-size: 0.8rem; 
+    font-weight: 600; 
+    background: rgba(255, 255, 255, 0.05); 
+    padding: 6px 16px; 
+    border-radius: 30px; 
+    border: 1px solid #333; 
+    display: flex; 
+    align-items: center;
+    transition: 0.3s;
+}
+
+.badge-dot { 
+    height: 8px; 
+    width: 8px; 
+    border-radius: 50%; 
+    margin-right: 10px; 
+    display: inline-block;
+}
+
+/* Status Colors */
+.badge-open { color: #2ecc71; border-color: rgba(46, 204, 113, 0.2); }
+.badge-open .badge-dot { background: #2ecc71; box-shadow: 0 0 10px #2ecc71; }
+
+.badge-closed { color: #e74c3c; border-color: rgba(231, 76, 60, 0.2); }
+.badge-closed .badge-dot { background: #e74c3c; }
+
+.nav-phone { 
+    color: white; 
+    text-decoration: none; 
+    font-weight: 700; 
+    font-size: 1.15rem; 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+}
+
+/* --- Hero Section --- */
+.hero { 
+    height: 70vh; 
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('hero-banner.jpeg') center/cover no-repeat; 
+    display: flex; 
+    align-items: center; 
+    text-align: center; 
+    justify-content: center; 
+}
+
+.script-text { font-family: 'Great Vibes', cursive; color: var(--primary); font-size: 3.5rem; }
+.hero h1 { font-size: 3.5rem; margin: 15px 0; font-weight: 700; letter-spacing: 2px; }
+.hero p { max-width: 600px; margin: 0 auto 30px; font-size: 1.1rem; color: #ccc; }
+
+.hero-actions .btn { 
+    margin: 10px; 
+    display: inline-block; 
+    padding: 15px 35px; 
+    border-radius: 50px; 
+    text-decoration: none; 
+    font-weight: 600; 
+    transition: 0.3s; 
+}
+.btn-primary { background: var(--primary); color: white; }
+.btn-whatsapp { background: var(--whatsapp); color: white; }
+.btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
+
+/* --- Food Menu Section --- */
+.menu-section { padding: 80px 5%; text-align: center; }
+.section-title { font-size: 3.5rem; font-weight: 700; letter-spacing: 2px; margin-bottom: 5px; text-transform: uppercase; color: #fff; }
+.section-subtitle { color: var(--primary); font-size: 1.1rem; letter-spacing: 3px; margin-bottom: 60px; }
+
+/* Professional 4-Column Grid */
+.menu-grid { 
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 25px; 
+    text-align: left;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.menu-category { 
+    background: var(--card-bg); 
+    padding: 25px; 
+    border-radius: 15px; 
+    border: 1px solid #222; 
+}
+
+.cat-title { 
+    background: #000; 
+    color: #fff; 
+    padding: 14px 18px; 
+    border-radius: 8px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.menu-category ul { list-style: none; }
+
+/* Item Dotted Spacing (Screenshot Style) */
+.menu-category li { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: baseline; 
+    margin-bottom: 15px; 
+    font-size: 0.95rem; 
+    color: var(--text-muted);
+}
+
+.menu-category li span:first-child { 
+    flex: 1; 
+    display: flex; 
+    align-items: baseline; 
+}
+
+.menu-category li span:first-child::after { 
+    content: ""; 
+    flex: 1; 
+    border-bottom: 1px dotted #444; 
+    margin: 0 10px; 
+}
+
+.menu-category li span:last-child { 
+    color: #fff; 
+    font-weight: 500; 
+}
+
+/* Saffron Headers for Prices */
+.small-header { 
+    color: var(--primary) !important; 
+    font-size: 0.8rem !important; 
+    font-weight: 800; 
+    margin-top: 25px; 
+    margin-bottom: 15px;
+    text-transform: uppercase; 
+    border-bottom: none !important;
+}
+
+/* --- Reviews Section --- */
+.reviews-section { background: #080808; text-align: center; }
+.widget-container { margin: 40px auto; min-height: 200px; padding: 20px; background: #111; border-radius: 15px; }
+.review-cta { margin-top: 50px; padding: 40px; background: var(--card-bg); border-radius: 20px; }
+.google-btn { background: #fff; color: #333; padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: 700; margin-top: 20px; display: inline-block; transition: 0.3s; }
+.google-btn:hover { background: var(--primary); color: white; }
+
+.google-review-btn { 
+    background: #fff; color: #333; padding: 15px 35px; border-radius: 50px; text-decoration: none; 
+    font-weight: 700; margin-top: 40px; display: inline-block; transition: 0.3s; 
+}
+.google-review-btn:hover { background: var(--primary); color: #fff; }
+
+/* --- Contact & Map --- */
+.contact-section { padding: 80px 5%; }
+.contact-wrapper { display: flex; flex-wrap: wrap; gap: 40px; max-width: 1400px; margin: 0 auto; }
+.map-container { flex: 1.5; min-width: 350px; }
+.contact-card { 
+    flex: 1; min-width: 350px; background: var(--card-bg); padding: 50px; 
+    border-radius: 20px; display: flex; flex-direction: column; justify-content: center; 
+}
+.card-header h2 { font-size: 2.5rem; margin-bottom: 5px; }
+.designation { color: var(--primary); font-weight: 700; font-size: 1.2rem; margin-bottom: 30px; display: block; }
+.contact-item { text-decoration: none; color: white; display: flex; align-items: flex-start; margin-bottom: 25px; transition: 0.3s; }
+.contact-item i { color: var(--primary); font-size: 1.3rem; margin-right: 20px; margin-top: 5px; }
+.contact-item:hover { color: var(--primary); transform: translateX(10px); }
+
+/* --- Floating WhatsApp --- */
+.floating-whatsapp { 
+    position: fixed; bottom: 30px; right: 30px; background: var(--whatsapp); color: white; 
+    padding: 15px 30px; border-radius: 50px; display: flex; align-items: center; gap: 10px; 
+    font-weight: 700; text-decoration: none; box-shadow: 0 10px 30px rgba(37,211,102,0.4); z-index: 1000; 
+}
+
+.widget-container a[href*="elfsight.com"] {
+    display: none !important;
+}
+
+/* Targets the common containers Elfsight uses for badges */
+div[class*="BadgeContainer__Inner"], 
+div[class*="Badge__Inner"], 
+a[class*="Badge__Link"],
+div[class*="Badge__Container"] {
+    display: none !important;
+}
+
+/* Fixes the extra space left at the bottom */
+.widget-container {
+    overflow: hidden;
+    padding-bottom: 0px !important;
+}
+/* --- Footer --- */
+.footer { text-align: center; padding: 40px; background: #000; border-top: 1px solid #222; font-size: 0.9rem; color: var(--text-muted); }
+
+/* --- Responsive Fixes --- */
+@media (max-width: 1200px) { .menu-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 768px) {
+    .nav-right { gap: 10px; }
+    .nav-phone { font-size: 1rem; }
+    .hero h1 { font-size: 2.5rem; }
+    .menu-grid { grid-template-columns: 1fr; }
+    .contact-wrapper { flex-direction: column-reverse; }
+}
