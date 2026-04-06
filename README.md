@@ -3,7 +3,7 @@
 Welcome to the official repository for **Gujarati Nasta Ghar**, located in Adajan, Surat. This website provides our customers with a real-time digital menu and authentic homemade food options.
 
 ## 🚀 Live Website
-Check out our live site here: [https://yourusername.github.io/gujarati-nasta-ghar/](https://yourusername.github.io/gujarati-nasta-ghar/)
+Check out our live site here: [https://yourusername.github.io/gujarati-nasta-ghar/]((https://github.com/Gh0stM0dE/gujarati-nasta-ghar)/)
 
 ## 🛠️ Features
 - **Dynamic Menu:** Powered by Supabase (SQL) for instant price updates.
